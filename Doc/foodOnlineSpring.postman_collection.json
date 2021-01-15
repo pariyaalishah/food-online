@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "219aa7db-4b8d-4182-aa61-85471af3575f",
+		"name": "foodOnlineSpring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"zahra\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-UpdateInfo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJXQlRBUVNYMDIyODgwMSIsImV4cCI6MTYxMDgwNjY0NX0.MQC1abLN2Q8Bcx0vnJNOffLQWLTp7w6O9fe_heNNmyCtWYhFaJR3zx6ag1TOAhWAevw97Wa4RPBWBn8mfv-a-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"زهراسادات\",\r\n    \"lastName\":\"کریمی نژاد\",\r\n    \"mobile\":\"09351112222\",\r\n    \"address\":\"تهران - جنت آباد مرکزی\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"زهرا\",\r\n    \"lastName\":\"کریمی\",\r\n    \"mobile\":\"09351112345\",\r\n    \"address\":\"تهران - جنت آباد\",\r\n    \"username\":\"zahra\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/customer/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"customer",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-GetInfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJXQlRBUVNYMDIyODgwMSIsImV4cCI6MTYxMDgwNjY0NX0.MQC1abLN2Q8Bcx0vnJNOffLQWLTp7w6O9fe_heNNmyCtWYhFaJR3zx6ag1TOAhWAevw97Wa4RPBWBn8mfv-a-g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNjFXQ1RCUlJEODgxMjg4OCIsImV4cCI6MTYxMDcwNTUwNX0.f9yqCRg_7VROQCgmwhdq_8PLm504Rwhxti0BiAhxIsXn-pSWyWuHG2-qZvEdufBbzIHZNJOE48rcT9MBJzsldA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/customer/161060ONFPAME6870462",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"customer",
+						"161060ONFPAME6870462"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant-Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"نرگس\",\r\n    \"lastName\":\"محمدی\",\r\n    \"mobile\":\"09353334455\",\r\n    \"username\":\"narges\",\r\n    \"password\":\"123456\",\r\n    \"restaurantName\":\"سنسو\",\r\n    \"tel\":\"02166667777\",\r\n    \"deliveryCost\":\"10000\",\r\n    \"restaurantCategory\":\"IRANI\",\r\n    \"address\":\"فردوس غرب\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/restaurant/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"restaurant",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant-GetInfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJXQlRBUVNYMDIyODgwMSIsImV4cCI6MTYxMDgwNjY0NX0.MQC1abLN2Q8Bcx0vnJNOffLQWLTp7w6O9fe_heNNmyCtWYhFaJR3zx6ag1TOAhWAevw97Wa4RPBWBn8mfv-a-g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/restaurant/161072QJCPXZJ0474676",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"restaurant",
+						"161072QJCPXZJ0474676"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant-UpdateInfo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJUT0lWTUhVMDQ3NDY3NiIsImV4cCI6MTYxMDgwNzM1N30.miP7dknN89oz8BQ5VJ779Yk2YEYdkkWUx6w0UIfSXQS3OH6rpBdq9_hVT4kXSEjulYcJE6GU6gxhFfnkhsArrA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantName\":\"سنسو غرب\",\r\n    \"deliveryCost\":\"8000\",\r\n    \"tel\":\"0211112222\",\r\n    \"restaurantCategory\":\"FARANGI\",\r\n    \"address\":\"فردوس شرق - وفاآذر\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/restaurant/161072QJCPXZJ0474676",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"restaurant",
+						"161072QJCPXZJ0474676"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8585/restaurant/161072QJCPXZJ0474676",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"restaurant",
+						"161072QJCPXZJ0474676"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant-ListOfAllRestaurant",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJXQlRBUVNYMDIyODgwMSIsImV4cCI6MTYxMDgwNjY0NX0.MQC1abLN2Q8Bcx0vnJNOffLQWLTp7w6O9fe_heNNmyCtWYhFaJR3zx6ag1TOAhWAevw97Wa4RPBWBn8mfv-a-g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/restaurant/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"restaurant",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restaurant-FoodList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJXQlRBUVNYMDIyODgwMSIsImV4cCI6MTYxMDgwNjY0NX0.MQC1abLN2Q8Bcx0vnJNOffLQWLTp7w6O9fe_heNNmyCtWYhFaJR3zx6ag1TOAhWAevw97Wa4RPBWBn8mfv-a-g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/food/restaurant/161072QJCPXZJ0474676",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"food",
+						"restaurant",
+						"161072QJCPXZJ0474676"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Food-Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJUT0lWTUhVMDQ3NDY3NiIsImV4cCI6MTYxMDgwNzM1N30.miP7dknN89oz8BQ5VJ779Yk2YEYdkkWUx6w0UIfSXQS3OH6rpBdq9_hVT4kXSEjulYcJE6GU6gxhFfnkhsArrA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantNumber\":\"161072QJCPXZJ0474676\",\r\n    \"name\":\"کباب کوبیده\",\r\n    \"price\":60000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/food",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Food-GetInfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJXQlRBUVNYMDIyODgwMSIsImV4cCI6MTYxMDgwNjY0NX0.MQC1abLN2Q8Bcx0vnJNOffLQWLTp7w6O9fe_heNNmyCtWYhFaJR3zx6ag1TOAhWAevw97Wa4RPBWBn8mfv-a-g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/food/161072HDCBSHY1534294",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"food",
+						"161072HDCBSHY1534294"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Food-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJUT0lWTUhVMDQ3NDY3NiIsImV4cCI6MTYxMDgwNzM1N30.miP7dknN89oz8BQ5VJ779Yk2YEYdkkWUx6w0UIfSXQS3OH6rpBdq9_hVT4kXSEjulYcJE6GU6gxhFfnkhsArrA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/food/161061LVJFTKQ0553744",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"food",
+						"161061LVJFTKQ0553744"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Food-UpdateInfo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJUT0lWTUhVMDQ3NDY3NiIsImV4cCI6MTYxMDgwNzM1N30.miP7dknN89oz8BQ5VJ779Yk2YEYdkkWUx6w0UIfSXQS3OH6rpBdq9_hVT4kXSEjulYcJE6GU6gxhFfnkhsArrA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"جوجه کباب با استخوان\",\n    \"price\":60000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/food/161072HDCBSHY1534294",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"food",
+						"161072HDCBSHY1534294"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart-CreateByCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJXQlRBUVNYMDIyODgwMSIsImV4cCI6MTYxMDgwNjY0NX0.MQC1abLN2Q8Bcx0vnJNOffLQWLTp7w6O9fe_heNNmyCtWYhFaJR3zx6ag1TOAhWAevw97Wa4RPBWBn8mfv-a-g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timestamp\": 1610611174645,\r\n    \"userId\": \"161060UUDTLOV8909907\",\r\n    \"restaurantId\": \"161061JDGXVAF0192424\",\r\n    \"cartFoodsList\": [\r\n        {\r\n            \"foodId\": \"161061WOSZYVG0937682\",\r\n            \"count\": 5\r\n        },\r\n        {\r\n            \"foodId\": \"161061YLAJPCH1273830\",\r\n            \"count\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/cart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart-GetInfo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJXQlRBUVNYMDIyODgwMSIsImV4cCI6MTYxMDgwNjY0NX0.MQC1abLN2Q8Bcx0vnJNOffLQWLTp7w6O9fe_heNNmyCtWYhFaJR3zx6ag1TOAhWAevw97Wa4RPBWBn8mfv-a-g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/cart/qSCO2P3aG8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"cart",
+						"qSCO2P3aG8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart-UpdateStatus",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNjEwNzJUT0lWTUhVMDQ3NDY3NiIsImV4cCI6MTYxMDgwNzM1N30.miP7dknN89oz8BQ5VJ779Yk2YEYdkkWUx6w0UIfSXQS3OH6rpBdq9_hVT4kXSEjulYcJE6GU6gxhFfnkhsArrA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cartStatus\":\"COOKING\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8585/cart/qSCO2P3aG8/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"cart",
+						"qSCO2P3aG8",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
